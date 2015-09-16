@@ -6,12 +6,19 @@
   "scripts": {
     "test": "mocha"
   },
+  "bugs": {
+    "url": "https://github.com/ironicnet/filter-odata/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ironicnet/filter-odata"
+  },
   "author": {
     "name": "Ezequiel Calderara",
     "email": "ezechico@gmail.com",
     "url": "http://www.ironicnet.com"
   },
-  "license": "ISC",
+  "license": "GPL-3.0",
   "devDependencies": {
     "assert": "^1.3.0",
     "mocha": "^2.3.2"
