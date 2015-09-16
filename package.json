@@ -1,0 +1,23 @@
+{
+  "name": "filter-odata",
+  "version": "1.0.0",
+  "description": "Utility script to convert a filter to a OData filter",
+  "main": "conversor.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": {
+    "name": "Ezequiel Calderara",
+    "email": "ezechico@gmail.com",
+    "url": "http://www.ironicnet.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "mocha": "^2.3.2"
+  },
+  "dependencies": {
+    "underscore.string": "^3.2.2"
+  },
+  "keywords": ["kendo", "odata", "filter"]
+}
