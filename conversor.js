@@ -59,16 +59,16 @@ module.exports = function Conversor() {
     //ceiling : {},// Not supported
     isOf: {}
   };
+  self.defaultOperator = "or";
 
   self.ToOData = function(filter) {
-    var defaultOperator = "or";
     if (filter.filters) {
       var queries = [];
-      var operator = self.getOperator(filter.logic || defaultOperator).term;
+      var operator = ' ' + self.getOperator(filter.logic || self.defaultOperator).term + ' ';
       for (var i = 0; i < filter.filters.length; i++) {
         queries.push("(" + self.ToOData(filter.filters[i]) + ")");
       }
-      return s.join(" " + defaultOperator + " ", queries);
+      return s.toSentence(queries, operator,operator);
     } else {
       var functionConfig = self.getFunction(filter.operator);
       if (functionConfig) {

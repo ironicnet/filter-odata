@@ -55,27 +55,3 @@ describe('Conversor', function() {
       });
   });
 });
-//////////TESTs
-
-// var multiple = {
-// logic: "or",
-// filters: [{
-//   field: "WarehouseProductName",
-//   operator: "equal",
-//   value: "Test"
-// }, {
-//   field: "SupplierProductName",
-//   operator: "equal",
-//   value: "Test"
-// }]
-// };
-// var single = {
-// field: "SupplierProductName",
-// operator: "eq",
-// value: "Test"
-// };
-// var expectedSingle = "SupplierProductName eq 'Test'";
-//
-// var actualSingle = processFilter(single);
-// console.assert(expectedSingle == actualSingle, "Expected: [" + expectedSingle +
-// "]. Received: [" + actualSingle + "]");
