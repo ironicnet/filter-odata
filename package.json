@@ -1,6 +1,6 @@
 {
   "name": "filter-odata",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility script to convert a filter to a OData filter",
   "main": "conversor.js",
   "scripts": {
@@ -26,5 +26,9 @@
   "dependencies": {
     "underscore.string": "^3.2.2"
   },
-  "keywords": ["kendo", "odata", "filter"]
+  "keywords": [
+    "kendo",
+    "odata",
+    "filter"
+  ]
 }
