@@ -1,6 +1,9 @@
 # filter-odata
 ====================
 [![Build Status](https://travis-ci.org/ironicnet/filter-odata.svg?branch=master)](https://travis-ci.org/ironicnet/filter-odata)
+
+## Synopsis
+
 Utility script to convert a filter to a OData filter
 
 Generates a filter using the [OData 2.0 Uri convention](http://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
