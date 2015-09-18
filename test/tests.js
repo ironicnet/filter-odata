@@ -23,6 +23,16 @@ describe('Conversor', function() {
       }); // use .deepEqual for arrays see: http://stackoverflow.com/questions/13225274/
 
     it(
+      "Receiving { field: 'SupplierProductName', operator: 'eq', value: 1 } should equal \"SupplierProductName eq 1\"",
+      function() {
+        assert.equal(conversor.ToOData({
+          field: "SupplierProductName",
+          operator: "eq",
+          value: 1
+        }), "SupplierProductName eq 1");
+      }); // use .deepEqual for arrays see: http://stackoverflow.com/questions/13225274/
+
+    it(
       "Receiving { field: 'SupplierProductName', operator: 'equal', value: 'Test' } should equal using alias. \"SupplierProductName eq 'Test'\"",
       function() {
         conversor.operators.eq.aliases.push('equal');
