@@ -1,6 +1,6 @@
 {
   "name": "filter-odata",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utility script to convert a filter to a OData filter",
   "main": "conversor.js",
   "scripts": {
