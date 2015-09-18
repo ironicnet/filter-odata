@@ -64,20 +64,21 @@ module.exports = function Conversor() {
   self.ToOData = function(filter) {
     if (filter.filters) {
       var queries = [];
-      var operator = ' ' + self.getOperator(filter.logic || self.defaultOperator).term + ' ';
+      var operator = ' ' + self.getOperator(filter.logic || self.defaultOperator)
+        .term + ' ';
       for (var i = 0; i < filter.filters.length; i++) {
         queries.push("(" + self.ToOData(filter.filters[i]) + ")");
       }
-      return s.toSentence(queries, operator,operator);
+      return s.toSentence(queries, operator, operator);
     } else {
       var functionConfig = self.getFunction(filter.operator);
       if (functionConfig) {
 
-          var field = filter.field;
-          var operator = self.getOperator(filter.operator).term;
-          var value = self.getFilterValue(filter.value);
+        var field = filter.field;
+        var operator = self.getOperator(filter.operator).term;
+        var value = self.getFilterValue(filter.value);
 
-          return field + " " + operator + " " + value;
+        return field + " " + operator + " " + value;
       } else {
         var field = filter.field;
         var operator = self.getOperator(filter.operator).term;
@@ -88,7 +89,11 @@ module.exports = function Conversor() {
     }
   };
   self.getFilterValue = function(value) {
-    return "'" + value + "'";
+    if (typeof value === 'string' || value instanceof String) {
+      return "'" + value + "'";
+    } else {
+      return value;
+    }
   };
   self.getOperator = function(name) {
     if (self.operators[name]) {
@@ -115,7 +120,8 @@ module.exports = function Conversor() {
       for (var functionName in self.functions) {
         if (self.functions.hasOwnProperty(functionName)) {
           var functionConfig = self.functions[functionName];
-          if (functionConfig.aliases && functionConfig.aliases.indexOf(name) > -1) {
+          if (functionConfig.aliases && functionConfig.aliases.indexOf(name) >
+            -1) {
             return functionConfig;
           }
         }

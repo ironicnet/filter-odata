@@ -1,5 +1,5 @@
 # filter-odata
-====================
+
 [![Build Status](https://travis-ci.org/ironicnet/filter-odata.svg?branch=master)](https://travis-ci.org/ironicnet/filter-odata)
 
 ## Synopsis
