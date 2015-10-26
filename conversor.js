@@ -131,7 +131,7 @@ function Conversor() {
     return null;
   };
   return self;
-}();
+};
 if (typeof(module) != "undefined" && module.exports) {
-  module.exports = Conversor;
+  module.exports = Conversor();
 }
