@@ -1,5 +1,6 @@
 var s = require('underscore.string');
-module.exports = function Conversor() {
+
+function Conversor() {
   var self = this;
 
   self.operators = {
@@ -131,3 +132,6 @@ module.exports = function Conversor() {
   };
   return self;
 }();
+if (typeof(module) != "undefined" && module.exports) {
+  module.exports = Conversor;
+}
