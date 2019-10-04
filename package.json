@@ -24,7 +24,7 @@
     "mocha": "~2.3.2"
   },
   "dependencies": {
-    "underscore.string": "~3.2.2"
+    "underscore.string": "~3.3.5"
   },
   "keywords": [
     "kendo",
